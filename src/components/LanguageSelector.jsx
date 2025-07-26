@@ -10,6 +10,7 @@ const LanguageSelector = ({ onLanguageChange }) => {
       <option value="en-US">English</option>
       <option value="tr-TR">Türkçe</option>
       <option value="fr-FR">Français</option>
+      <option value="de-DE">Deutsch</option>
       <option value="es-ES">Espanyola</option>
     </select>
   );

@@ -1,19 +1,43 @@
-import React, { useEffect } from 'react';
+// components/PredictionResult.jsx veya .js
+
+import React, { useEffect, useState } from 'react';
+import { translateText } from '../utils/translation';  // dosya yolunu kendi yapına göre ayarla
+
+const langMap = {
+  en: 'en-US',
+  tr: 'tr-TR',
+  fr: 'fr-FR',
+  de: 'de-DE',
+  es: 'es-ES',
+  // ihtiyacına göre ekle
+};
 
 const PredictionResult = ({ result, language }) => {
+  const [translatedWord, setTranslatedWord] = useState('');
+
   useEffect(() => {
-    const utterance = new SpeechSynthesisUtterance(result.label);
-    utterance.lang = language;
-    window.speechSynthesis.speak(utterance);
+    if (!result) return;
+
+    async function fetchTranslation() {
+      try {
+        const translated = await translateText(result.label, language);
+        setTranslatedWord(translated);
+
+        const utterance = new SpeechSynthesisUtterance(translated);
+        utterance.lang = langMap[language] || 'en-US';
+        window.speechSynthesis.speak(utterance);
+      } catch (error) {
+        console.error('Çeviri hatası:', error);
+        setTranslatedWord(result.label);
+      }
+    }
+
+    fetchTranslation();
   }, [result, language]);
 
-  return (
-    <div>
-      <h2>Prediction:</h2>
-      <p className="prediction">{result.label}</p>
+  if (!result) return null;
 
-    </div>
-  );
+  return <div className="prediction-result">{translatedWord || result.label}</div>;
 };
 
 export default PredictionResult;
