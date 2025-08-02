@@ -1,12 +1,51 @@
-# React + Vite
+# 🌐 LanguaZ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, minimal React project powered by **Vite** — lightning-fast builds, hot module replacement, and a clean development experience. Perfect for building scalable web interfaces with best practices in mind.
 
-Currently, two official plugins are available:
+<img width="300" height="200" alt="Ekran Resmi 2025-08-03 00 31 19" src="https://github.com/user-attachments/assets/b4493fcf-604e-46ce-a3a2-28fc1c04445c" />
+<!-- (Optional: Replace or remove if not applicable) -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+Check out the deployed project here:  
+👉 [langua-z.vercel.app](https://langua-z.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Project Overview
+
+**LanguaZ** is a front-end web development starter template built with:
+
+- ⚛️ **React** for building dynamic UIs  
+- ⚡ **Vite** for fast development and optimized production builds  
+- ✅ **ESLint** for code quality and consistency
+
+It integrates official Vite plugins for React, supporting **Fast Refresh** with both **Babel** and **SWC**, allowing you to prototype and iterate faster.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Frontend Framework:** React  
+- **Build Tool:** Vite  
+- **Languages:** JavaScript, HTML, CSS  
+- **Linting & Code Quality:** ESLint  
+
+---
+
+## 📦 Getting Started
+
+Follow these steps to run the project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/zzeynepcvk/LanguaZ.git
+
+# 2. Move into the project directory
+cd LanguaZ
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
